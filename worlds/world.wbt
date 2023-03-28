@@ -8,8 +8,8 @@ EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/project
 WorldInfo {
 }
 Viewpoint {
-  orientation -0.002809317731147195 0.08390255657628433 -0.9964700039308001 1.4005984565517162
-  position -0.8753885145965171 3.435164128152013 0.628512100021131
+  orientation 0.13031659499533216 -0.06159135455394561 -0.9895575223871691 4.7616970611851706
+  position 0.12662240862134375 -1.8659998162827443 0.7309726852737694
 }
 TexturedBackground {
 }
@@ -27,8 +27,8 @@ Robot {
         anchor -0.2 -0.175 0
       }
       endPoint Solid {
-        translation -0.15274942304022457 -0.175 -0.14236355916093255
-        rotation 0 -1 0 0.3204607067677988
+        translation -0.2 -0.175 -0.15000000000000016
+        rotation 0 1 0 0
         children [
           HingeJoint {
             jointParameters HingeJointParameters {
@@ -37,8 +37,8 @@ Robot {
               anchor 0 0 -0.15
             }
             endPoint Solid {
-              translation 0.017981119144038174 0 -0.29891581297608355
-              rotation 0 -1 0 0.12012237150939349
+              translation 0.09999999999999987 0 -0.2617999999999999
+              rotation 0 -1 0 0.7296999999999996
               children [
                 HingeJoint {
                   jointParameters HingeJointParameters {
@@ -47,8 +47,8 @@ Robot {
                     anchor 0 0 -0.15
                   }
                   endPoint DEF wheel_body Solid {
-                    translation 0 -0.05 -0.15
-                    rotation -0.933191263035196 0.25422127706764125 -0.2540189144155867 4.64409335979052
+                    translation 0 -0.049999999999999975 -0.15
+                    rotation -0.9331912630351962 0.25422127706764097 -0.2540189144155867 4.644093359790522
                     children [
                       HingeJoint {
                         jointParameters HingeJointParameters {
@@ -73,8 +73,6 @@ Robot {
                     boundingObject USE wheel_shape
                     physics Physics {
                     }
-                    linearVelocity -0.0037310189265225696 3.76612256467446e-06 0.012487194031105507
-                    angularVelocity -5.805048079058146e-05 0.02429421876744798 3.62511411623285e-05
                   }
                 }
                 DEF R_B_small_shape Shape {
@@ -89,8 +87,6 @@ Robot {
               boundingObject USE R_B_small_shape
               physics Physics {
               }
-              linearVelocity -0.03604252175535511 2.173357580846468e-06 -0.002485218962108304
-              angularVelocity -3.6623234493241046e-05 -0.2373508346775921 2.551075519314049e-05
             }
           }
           DEF R_B_Big_shape Shape {
@@ -105,8 +101,6 @@ Robot {
         boundingObject USE R_B_Big_shape
         physics Physics {
         }
-        linearVelocity -0.03417576430375179 2.771512226641677e-06 -0.008728370639277241
-        angularVelocity -1.8197221200630243e-05 0.23510341065395973 1.2301265744324874e-05
       }
     }
     DEF left_back HingeJoint {
@@ -116,8 +110,8 @@ Robot {
         anchor -0.2 0.175 0
       }
       endPoint Solid {
-        translation -0.15390323094365754 0.175 -0.14274133207507284
-        rotation 0 1 0 5.97081847491192
+        translation -0.2 0.175 -0.1499999999999998
+        rotation 0 1 0 0
         children [
           HingeJoint {
             jointParameters HingeJointParameters {
@@ -126,8 +120,8 @@ Robot {
               anchor 0 0 -0.15
             }
             endPoint Solid {
-              translation -0.006691017134499294 0 -0.2998481574451479
-              rotation 0 1 0 0.044665103714166834
+              translation 0.10000000000000012 0 -0.2618000000000001
+              rotation 0 -1 0 0.7296999999999996
               children [
                 HingeJoint {
                   jointParameters HingeJointParameters {
@@ -136,8 +130,8 @@ Robot {
                     anchor 0 0 -0.15
                   }
                   endPoint DEF wheel_body Solid {
-                    translation 0 0.05 -0.15
-                    rotation -0.7664726165689956 0.45433920617091156 -0.4539775476671325 4.450282699709591
+                    translation 0 0.05000000000000002 -0.15
+                    rotation -0.7664726165689952 0.4543392061709115 -0.453977547667133 4.450282699709592
                     children [
                       HingeJoint {
                         jointParameters HingeJointParameters {
@@ -162,8 +156,6 @@ Robot {
                     boundingObject USE wheel_shape
                     physics Physics {
                     }
-                    linearVelocity -0.0025632251621863535 1.992713787443355e-05 -0.007834946417866168
-                    angularVelocity -0.0006282168315756757 -0.053022031872190234 0.0001690284586002261
                   }
                 }
                 DEF L_B_small_shape Shape {
@@ -178,8 +170,6 @@ Robot {
               boundingObject USE L_B_small_shape
               physics Physics {
               }
-              linearVelocity -0.2471375384138046 7.5733524080174924e-06 -0.09249540692363016
-              angularVelocity -0.00036768778570883144 -1.7273158094137917 0.0002152354301744563
             }
           }
           DEF L_B_Big_shape Shape {
@@ -195,8 +185,6 @@ Robot {
         boundingObject USE L_B_Big_shape
         physics Physics {
         }
-        linearVelocity -0.2458533084913337 2.4511223722320407e-05 -0.0886053278777131
-        angularVelocity -0.00021222158810500327 1.7436904241741602 1.3693177666393681e-05
       }
     }
     DEF right_front HingeJoint {
@@ -206,8 +194,8 @@ Robot {
         anchor 0.2 -0.175 0
       }
       endPoint Solid {
-        translation 0.1617629805665516 -0.175 -0.14504458054283204
-        rotation 0 1 0 0.25775820851760967
+        translation 0.2 -0.175 -0.15
+        rotation 0 1 0 0
         children [
           HingeJoint {
             jointParameters HingeJointParameters {
@@ -216,8 +204,8 @@ Robot {
               anchor 0 0 -0.15
             }
             endPoint DEF R_B_small_body Solid {
-              translation -0.019992262199325442 0 -0.29865917210906767
-              rotation 0 1 0 0.1336390482211379
+              translation -0.09999999999999996 0 -0.2617999999999999
+              rotation 0 1 0 0.7297000000000008
               children [
                 DEF R_F_small_shape Shape {
                   appearance PBRAppearance {
@@ -232,8 +220,6 @@ Robot {
               boundingObject USE R_F_small_shape
               physics Physics {
               }
-              linearVelocity 0.022570106635342785 2.3488012773606816e-06 0.00018260792225359857
-              angularVelocity 3.712087040300225e-05 0.19353047161726356 -2.098057530798618e-05
             }
           }
           DEF R_F_Big_shape Shape {
@@ -249,8 +235,6 @@ Robot {
         boundingObject USE R_F_Big_shape
         physics Physics {
         }
-        linearVelocity 0.024434669795135193 -2.014676867399086e-06 -0.0060616919169575794
-        angularVelocity 1.7450012905579665e-05 -0.16778598943011125 -1.1206087050374095e-05
       }
     }
     DEF left_front HingeJoint {
@@ -260,8 +244,8 @@ Robot {
         anchor 0.2 0.175 0
       }
       endPoint Solid {
-        translation 0.14781436054069672 0.175 -0.14062950982714692
-        rotation 0 1 0 0.3553347928199932
+        translation 0.19999999999999996 0.175 -0.15000000000000013
+        rotation 0 1 0 0
         children [
           HingeJoint {
             jointParameters HingeJointParameters {
@@ -270,8 +254,8 @@ Robot {
               anchor 0 0 -0.15
             }
             endPoint DEF L_B_small_body Solid {
-              translation 0.006605105584048851 0 -0.29985196889004684
-              rotation 0 -0.9999999999999999 0 0.04409178698488533
+              translation -0.10000000000000016 0 -0.2618000000000002
+              rotation 0 1 0 0.7297000000000002
               children [
                 DEF L_F_small_shape Shape {
                   appearance PBRAppearance {
@@ -286,8 +270,6 @@ Robot {
               boundingObject USE L_F_small_shape
               physics Physics {
               }
-              linearVelocity 0.22292849777633922 1.3162083652672355e-05 -0.08508261632581321
-              angularVelocity 0.00039734153800934254 1.5909696159281037 -8.5015052046071e-05
             }
           }
           DEF L_F_Big_shape Shape {
@@ -303,8 +285,6 @@ Robot {
         boundingObject USE L_F_Big_shape
         physics Physics {
         }
-        linearVelocity 0.224214895430351 -2.370925287042715e-05 -0.08114329964512021
-        angularVelocity 0.00016886923740427044 -1.591209406150952 -0.00012462387778436186
       }
     }
     DEF Body_shape Shape {
