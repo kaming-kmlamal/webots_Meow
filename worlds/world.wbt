@@ -1,0 +1,320 @@
+#VRML_SIM R2023a utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/floors/protos/CircleArena.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/appearances/protos/VarnishedPine.proto"
+
+WorldInfo {
+}
+Viewpoint {
+  orientation -0.002809317731147195 0.08390255657628433 -0.9964700039308001 1.4005984565517162
+  position -0.8753885145965171 3.435164128152013 0.628512100021131
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+CircleArena {
+}
+Robot {
+  translation 0 0 0.74
+  children [
+    DEF right_back HingeJoint {
+      jointParameters HingeJointParameters {
+        position -0.32046070676779914
+        axis 0 1 0
+        anchor -0.2 -0.175 0
+      }
+      endPoint Solid {
+        translation -0.15274942304022457 -0.175 -0.14236355916093255
+        rotation 0 -1 0 0.3204607067677988
+        children [
+          HingeJoint {
+            jointParameters HingeJointParameters {
+              position 0.6095776284906076
+              axis 0 1 0
+              anchor 0 0 -0.15
+            }
+            endPoint Solid {
+              translation 0.017981119144038174 0 -0.29891581297608355
+              rotation 0 -1 0 0.12012237150939349
+              children [
+                HingeJoint {
+                  jointParameters HingeJointParameters {
+                    position 5.751654393233611
+                    axis 0 1 0
+                    anchor 0 0 -0.15
+                  }
+                  endPoint DEF wheel_body Solid {
+                    translation 0 -0.05 -0.15
+                    rotation -0.933191263035196 0.25422127706764125 -0.2540189144155867 4.64409335979052
+                    children [
+                      HingeJoint {
+                        jointParameters HingeJointParameters {
+                          position -6.37907401275438
+                          axis 0 0 -1
+                          anchor 0 0 -0.05
+                        }
+                        endPoint SolidReference {
+                          solidName "R_F_small_body"
+                        }
+                      }
+                      DEF wheel_shape Shape {
+                        appearance PBRAppearance {
+                          baseColor 1 1 0
+                        }
+                        geometry Cylinder {
+                          height 0.05
+                          radius 0.1
+                        }
+                      }
+                    ]
+                    boundingObject USE wheel_shape
+                    physics Physics {
+                    }
+                    linearVelocity -0.0037310189265225696 3.76612256467446e-06 0.012487194031105507
+                    angularVelocity -5.805048079058146e-05 0.02429421876744798 3.62511411623285e-05
+                  }
+                }
+                DEF R_B_small_shape Shape {
+                  appearance PBRAppearance {
+                    baseColor 1 0 1
+                  }
+                  geometry Box {
+                    size 0.05 0.05 0.3
+                  }
+                }
+              ]
+              boundingObject USE R_B_small_shape
+              physics Physics {
+              }
+              linearVelocity -0.03604252175535511 2.173357580846468e-06 -0.002485218962108304
+              angularVelocity -3.6623234493241046e-05 -0.2373508346775921 2.551075519314049e-05
+            }
+          }
+          DEF R_B_Big_shape Shape {
+            appearance PBRAppearance {
+              baseColor 0 1 1
+            }
+            geometry Box {
+              size 0.05 0.05 0.3
+            }
+          }
+        ]
+        boundingObject USE R_B_Big_shape
+        physics Physics {
+        }
+        linearVelocity -0.03417576430375179 2.771512226641677e-06 -0.008728370639277241
+        angularVelocity -1.8197221200630243e-05 0.23510341065395973 1.2301265744324874e-05
+      }
+    }
+    DEF left_back HingeJoint {
+      jointParameters HingeJointParameters {
+        position 5.97081847491192
+        axis 0 1 0
+        anchor -0.2 0.175 0
+      }
+      endPoint Solid {
+        translation -0.15390323094365754 0.175 -0.14274133207507284
+        rotation 0 1 0 5.97081847491192
+        children [
+          HingeJoint {
+            jointParameters HingeJointParameters {
+              position 0.7743651037141631
+              axis 0 1 0
+              anchor 0 0 -0.15
+            }
+            endPoint Solid {
+              translation -0.006691017134499294 0 -0.2998481574451479
+              rotation 0 1 0 0.044665103714166834
+              children [
+                HingeJoint {
+                  jointParameters HingeJointParameters {
+                    position 17.780087006489186
+                    axis 0 1 0
+                    anchor 0 0 -0.15
+                  }
+                  endPoint DEF wheel_body Solid {
+                    translation 0 0.05 -0.15
+                    rotation -0.7664726165689956 0.45433920617091156 -0.4539775476671325 4.450282699709591
+                    children [
+                      HingeJoint {
+                        jointParameters HingeJointParameters {
+                          position -24.943727118933303
+                          axis 0 0 -1
+                          anchor 0 0 0.05
+                        }
+                        endPoint SolidReference {
+                          solidName "L_F_small_body"
+                        }
+                      }
+                      DEF wheel_shape Shape {
+                        appearance PBRAppearance {
+                          baseColor 1 1 0
+                        }
+                        geometry Cylinder {
+                          height 0.05
+                          radius 0.1
+                        }
+                      }
+                    ]
+                    boundingObject USE wheel_shape
+                    physics Physics {
+                    }
+                    linearVelocity -0.0025632251621863535 1.992713787443355e-05 -0.007834946417866168
+                    angularVelocity -0.0006282168315756757 -0.053022031872190234 0.0001690284586002261
+                  }
+                }
+                DEF L_B_small_shape Shape {
+                  appearance PBRAppearance {
+                    baseColor 1 0 1
+                  }
+                  geometry Box {
+                    size 0.05 0.05 0.3
+                  }
+                }
+              ]
+              boundingObject USE L_B_small_shape
+              physics Physics {
+              }
+              linearVelocity -0.2471375384138046 7.5733524080174924e-06 -0.09249540692363016
+              angularVelocity -0.00036768778570883144 -1.7273158094137917 0.0002152354301744563
+            }
+          }
+          DEF L_B_Big_shape Shape {
+            appearance PBRAppearance {
+              baseColor 0 1 1
+            }
+            geometry Box {
+              size 0.05 0.05 0.3
+            }
+          }
+        ]
+        name "solid(2)"
+        boundingObject USE L_B_Big_shape
+        physics Physics {
+        }
+        linearVelocity -0.2458533084913337 2.4511223722320407e-05 -0.0886053278777131
+        angularVelocity -0.00021222158810500327 1.7436904241741602 1.3693177666393681e-05
+      }
+    }
+    DEF right_front HingeJoint {
+      jointParameters HingeJointParameters {
+        position 0.25775820851761017
+        axis 0 1 0
+        anchor 0.2 -0.175 0
+      }
+      endPoint Solid {
+        translation 0.1617629805665516 -0.175 -0.14504458054283204
+        rotation 0 1 0 0.25775820851760967
+        children [
+          HingeJoint {
+            jointParameters HingeJointParameters {
+              position -0.5960609517788641
+              axis 0 1 0
+              anchor 0 0 -0.15
+            }
+            endPoint DEF R_B_small_body Solid {
+              translation -0.019992262199325442 0 -0.29865917210906767
+              rotation 0 1 0 0.1336390482211379
+              children [
+                DEF R_F_small_shape Shape {
+                  appearance PBRAppearance {
+                    baseColor 1 0 1
+                  }
+                  geometry Box {
+                    size 0.05 0.05 0.3
+                  }
+                }
+              ]
+              name "R_F_small_body"
+              boundingObject USE R_F_small_shape
+              physics Physics {
+              }
+              linearVelocity 0.022570106635342785 2.3488012773606816e-06 0.00018260792225359857
+              angularVelocity 3.712087040300225e-05 0.19353047161726356 -2.098057530798618e-05
+            }
+          }
+          DEF R_F_Big_shape Shape {
+            appearance PBRAppearance {
+              baseColor 0 1 1
+            }
+            geometry Box {
+              size 0.05 0.05 0.3
+            }
+          }
+        ]
+        name "solid(1)"
+        boundingObject USE R_F_Big_shape
+        physics Physics {
+        }
+        linearVelocity 0.024434669795135193 -2.014676867399086e-06 -0.0060616919169575794
+        angularVelocity 1.7450012905579665e-05 -0.16778598943011125 -1.1206087050374095e-05
+      }
+    }
+    DEF left_front HingeJoint {
+      jointParameters HingeJointParameters {
+        position 0.3553347928199937
+        axis 0 1 0
+        anchor 0.2 0.175 0
+      }
+      endPoint Solid {
+        translation 0.14781436054069672 0.175 -0.14062950982714692
+        rotation 0 1 0 0.3553347928199932
+        children [
+          HingeJoint {
+            jointParameters HingeJointParameters {
+              position -0.7737917869848858
+              axis 0 1 0
+              anchor 0 0 -0.15
+            }
+            endPoint DEF L_B_small_body Solid {
+              translation 0.006605105584048851 0 -0.29985196889004684
+              rotation 0 -0.9999999999999999 0 0.04409178698488533
+              children [
+                DEF L_F_small_shape Shape {
+                  appearance PBRAppearance {
+                    baseColor 1 0 1
+                  }
+                  geometry Box {
+                    size 0.05 0.05 0.3
+                  }
+                }
+              ]
+              name "L_F_small_body"
+              boundingObject USE L_F_small_shape
+              physics Physics {
+              }
+              linearVelocity 0.22292849777633922 1.3162083652672355e-05 -0.08508261632581321
+              angularVelocity 0.00039734153800934254 1.5909696159281037 -8.5015052046071e-05
+            }
+          }
+          DEF L_F_Big_shape Shape {
+            appearance PBRAppearance {
+              baseColor 0 1 1
+            }
+            geometry Box {
+              size 0.05 0.05 0.3
+            }
+          }
+        ]
+        name "solid(3)"
+        boundingObject USE L_F_Big_shape
+        physics Physics {
+        }
+        linearVelocity 0.224214895430351 -2.370925287042715e-05 -0.08114329964512021
+        angularVelocity 0.00016886923740427044 -1.591209406150952 -0.00012462387778436186
+      }
+    }
+    DEF Body_shape Shape {
+      appearance VarnishedPine {
+      }
+      geometry Box {
+        size 0.4 0.3 0.2
+      }
+    }
+  ]
+  name "Meow"
+  boundingObject USE Body_shape
+}
